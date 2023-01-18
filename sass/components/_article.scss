@@ -4,6 +4,7 @@
   --padding: 1.75rem;
 }
 .article {
+    flex: 1;
   background-color: var(--bg-primary-100);
   box-shadow: 0px 15px 30px -11px var(--shadow-primary-500);
   border-radius: 0.5rem;
