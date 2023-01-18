@@ -18,3 +18,8 @@ body {
   max-width: 74rem;
 }
 
+@media (min-width: $desktop-size) {
+  .wrapper {
+    padding-top: 5rem;
+  }
+}
