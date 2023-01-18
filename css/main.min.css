@@ -77,6 +77,98 @@
   color: var(--blue);
 }
 
+:root {
+  --padding: 1.75rem;
+}
+
+.article {
+  background-color: var(--bg-primary-100);
+  -webkit-box-shadow: 0px 15px 30px -11px var(--shadow-primary-500);
+          box-shadow: 0px 15px 30px -11px var(--shadow-primary-500);
+  border-radius: 0.5rem;
+  padding: var(--padding) var(--padding) 7.375rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  max-width: 21.875rem;
+}
+.article *:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  width: 100%;
+}
+.article--supervisor {
+  background: url("../images/icon-supervisor.svg") bottom var(--padding) right var(--padding) no-repeat;
+}
+.article--supervisor :after {
+  background-color: var(--cyan);
+}
+.article--team-builder {
+  background: url("../images/icon-team-builder.svg") bottom var(--padding) right var(--padding) no-repeat;
+}
+.article--team-builder :after {
+  background-color: var(--red);
+}
+.article--karma {
+  background: url("../images/icon-karma.svg") bottom var(--padding) right var(--padding) no-repeat;
+}
+.article--karma :after {
+  background-color: var(--orange);
+}
+.article--calculator {
+  background: url("../images/icon-calculator.svg") bottom var(--padding) right var(--padding) no-repeat;
+}
+.article--calculator :after {
+  background-color: var(--blue);
+}
+
+@media (min-width: 64em) {
+  :root {
+    --padding: 2rem;
+  }
+  .article {
+    padding-bottom: 8.5rem;
+  }
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .flex--main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.hero {
+  margin-bottom: 4.75rem;
+  max-width: 33.75rem;
+  margin-inline: auto;
+}
+.hero *:nth-last-child(1) {
+  margin-top: 1rem;
+}
+
+@media (min-width: 64em) {
+  .hero {
+    margin-bottom: 4rem;
+  }
+}
 body {
   font-family: var(--ff-primary);
   position: relative;
@@ -101,66 +193,4 @@ body {
 .wrapper {
   padding: 5.25rem 2rem 4.875rem;
   max-width: 70rem;
-}
-
-.hero {
-  margin-bottom: 4.75rem;
-  max-width: 33.75rem;
-}
-.hero *:nth-last-child(1) {
-  margin-top: 1rem;
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.5rem;
-}
-
-.article {
-  background-color: var(--bg-primary-100);
-  -webkit-box-shadow: 0px 15px 30px -11px var(--shadow-primary-500);
-          box-shadow: 0px 15px 30px -11px var(--shadow-primary-500);
-  border-radius: 0.5rem;
-  padding: 1.75rem 1.75rem 7.375rem;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-}
-.article *:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 3.5px;
-  width: 100%;
-}
-.article--supervisor {
-  background: url("../images/icon-supervisor.svg") bottom 1.75rem right 1.75rem no-repeat;
-}
-.article--supervisor :after {
-  background-color: var(--cyan);
-}
-.article--team-builder {
-  background: url("../images/icon-team-builder.svg") bottom 1.75rem right 1.75rem no-repeat;
-}
-.article--team-builder :after {
-  background-color: var(--red);
-}
-.article--karma {
-  background: url("../images/icon-karma.svg") bottom 1.75rem right 1.75rem no-repeat;
-}
-.article--karma :after {
-  background-color: var(--orange);
-}
-.article--calculator {
-  background: url("../images/icon-calculator.svg") bottom 1.75rem right 1.75rem no-repeat;
-}
-.article--calculator :after {
-  background-color: var(--blue);
 }/*# sourceMappingURL=main.min.css.map */
